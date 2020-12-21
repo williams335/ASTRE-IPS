@@ -1679,8 +1679,35 @@ export class AppComponent {
 
 
 
+  SElec: number = -10;
+  SJensim: number = 10;
+  SRunning: number = -5;
+  SLangWeb: number = 12;
+  SlangMats: number = -12;
 
+  SPaintPhotoshop_Regu: number = 16;
+  SPaintPhotoshop_Unpeu: number = 8;
+  SPaintPhotoshop_Jamais: number = -15;
 
+  SLinux_Regu: number = -12;
+  SLinux_Unpeu: number = -5;
+  SLinux_Jamais: number = 11;
+
+  SArduino_Regu: number = -15;
+  SArduino_Unpeu: number = -8;
+  SArduino_Jamais: number = 12;
+
+  SLogicielpc_Regu: number = 16;
+  SLogicielpc_Unpeu: number = 8;
+  SLogicielpc_Jamais: number = -12;
+
+  SLogos_Regu: number = 16;
+  SLogos_Unpeu: number = 7;
+  SLogos_Jamais: number = -15;
+
+  SRobots_Regu: number = -16;
+  SRobots_Unpeu: number = -8;
+  SRobots_Jamais: number = 12;
 
   title = 'ASTRE-IPS';
 
@@ -1692,6 +1719,7 @@ export class AppComponent {
 
   onTitleChanged(event: any) {
     this.hypothese = event.target.value;
+    console.log("hypothese" + this.hypothese);
   }
 
 
