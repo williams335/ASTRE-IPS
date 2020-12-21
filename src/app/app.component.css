@@ -1,0 +1,66 @@
+html,body{
+	margin: 0 auto;
+	width: 100%;
+    height: 100%;
+}
+a, h1, h4{
+	color: white;
+}
+
+h6{
+    color: black;
+}
+
+.post{
+	text-align: center;
+	margin: 10vh auto;
+}
+
+input{
+    width: 10em;
+}
+
+.success{
+    text-align: left;
+    margin-left: 10em;
+}
+
+.text-muted{
+    color: black;
+}
+
+ .input-group-addon{
+  	background: #343a40;
+  	color: white
+  }
+
+  .nav-link.active{
+	color: white;
+	background-color: green;
+}
+
+.footer{
+	color: black;
+	position:absolute;
+	bottom:0;
+}
+@media (max-width: 375px) {
+  .text-muted{
+  	display: none;
+  }
+}
+/*@media (max-width: 1025px) {
+  .input-group-addon{
+  	background: #343a40;
+  	color: white
+  }
+}*/
+
+/*#bg{
+
+	height: 100vh;
+	background-image: url(../assets/img.jpg); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}*/
