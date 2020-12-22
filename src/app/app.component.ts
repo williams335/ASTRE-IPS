@@ -1710,24 +1710,188 @@ export class AppComponent {
   SRobots_Jamais: number = 12;
 
   title = 'ASTRE-IPS';
+  
+  val;
 
   Scores: number[] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-  Etudiants: String[] = [];
+  Etudiants: number[] = [];
+  
+  constructor() {
+    for (var index in this.Questions) {
+      console.log(index); // prints indexes: 0, 1, 2, 3
+      this.val = this.Questions[index]["1-Quel est ton numéro étudiant ?"];
+      console.log(this.val); // prints elements: 10, 20, 30, 40
+      this.Etudiants.push(this.val);
+      
+    }
+    console.log("Etudiants "+ this.Etudiants);
+  }
+  
 
   hypothese: string;
   cover: File;
 
-  onTitleChanged(event: any) {
-    this.hypothese = event.target.value;
-    console.log("hypothese" + this.hypothese);
+  onChangedSElec(event: any) {
+    this.SElec = event.target.value;
+    console.log("SElec" + this.SElec);
+  }
+
+  onChangedSJensim(event: any) {
+    this.SJensim = event.target.value;
+    console.log("SJensim" + this.SJensim);
+  }
+
+  onChangedSRunning(event: any) {
+    this.SRunning = event.target.value;
+    console.log("SRunning" + this.SRunning);
+  }
+
+  onChangedSLangWeb(event: any) {
+    this.SLangWeb = event.target.value;
+    console.log("SLangWeb" + this.SLangWeb);
+  }
+
+  onChangedSlangMats(event: any) {
+    this.SlangMats = event.target.value;
+    console.log("SlangMats" + this.SlangMats);
+  }
+
+  onChangedSPaintPhotoshop_Regu(event: any) {
+    this.SPaintPhotoshop_Regu = event.target.value;
+    console.log("SPaintPhotoshop_Regu" + this.SPaintPhotoshop_Regu);
+  }
+
+  onChangedSPaintPhotoshop_Unpeu(event: any) {
+    this.SPaintPhotoshop_Unpeu = event.target.value;
+    console.log("SPaintPhotoshop_Unpeu" + this.SPaintPhotoshop_Unpeu);
+  }
+
+  onChangedSPaintPhotoshop_Jamais(event: any) {
+    this.SPaintPhotoshop_Jamais = event.target.value;
+    console.log("SPaintPhotoshop_Jamais" + this.SPaintPhotoshop_Jamais);
+  }
+
+  onChangedSLinux_Regu(event: any) {
+    this.SLinux_Regu = event.target.value;
+    console.log("SLinux_Regu" + this.SLinux_Regu);
   }
 
 
-  newBook() {
+  onChangedSLinux_Unpeu(event: any) {
+    this.SLinux_Unpeu = event.target.value;
+    console.log("SLinux_Unpeu" + this.SLinux_Unpeu);
+  }
+
+  onChangedSLinux_Jamais(event: any) {
+    this.SLinux_Jamais = event.target.value;
+    console.log("SLinux_Jamais" + this.SLinux_Jamais);
+  }
+
+  onChangedSArduino_Regu(event: any) {
+    this.SArduino_Regu = event.target.value;
+    console.log("SArduino_Regu" + this.SArduino_Regu);
+  }
+
+  onChangedSArduino_Unpeu(event: any) {
+    this.SArduino_Unpeu = event.target.value;
+    console.log("SArduino_Unpeu" + this.SArduino_Unpeu);
+  }
+
+  onChangedSArduino_Jamais(event: any) {
+    this.SArduino_Jamais = event.target.value;
+    console.log("SArduino_Jamais" + this.SArduino_Jamais);
+  }
+
+  onChangedSLogicielpc_Regu(event: any) {
+    this.SLogicielpc_Regu = event.target.value;
+    console.log("SLogicielpc_Regu" + this.SLogicielpc_Regu);
+  }
+
+  onChangedSSLogicielpc_Unpeu(event: any) {
+    this.SLogicielpc_Unpeu = event.target.value;
+    console.log("SLogicielpc_Unpeu" + this.SLogicielpc_Unpeu);
+  }
+
+  onChangedSLogicielpc_Jamais(event: any) {
+    this.SLogicielpc_Jamais = event.target.value;
+    console.log("SLogicielpc_Jamais" + this.SLogicielpc_Jamais);
+  }
+
+  onChangedSLogos_Regu(event: any) {
+    this.SLogos_Regu = event.target.value;
+    console.log("SLogos_Regu" + this.SLogos_Regu);
+  }
+
+  onChangedSLogos_Unpeu(event: any) {
+    this.SLogos_Unpeu = event.target.value;
+    console.log("SLogos_Unpeu" + this.SLogos_Unpeu);
+  }
+
+  onChangedSLogos_Jamais(event: any) {
+    this.SLogos_Jamais = event.target.value;
+    console.log("SLogos_Jamais" + this.SLogos_Jamais);
+  }
+
+  onChangedSRobots_Regu(event: any) {
+    this.SRobots_Regu = event.target.value;
+    console.log("SRobots_Regu" + this.SRobots_Regu);
+  }
+
+  onChangedSRobots_Unpeu(event: any) {
+    this.SRobots_Unpeu = event.target.value;
+    console.log("SRobots_Unpeu" + this.SRobots_Unpeu);
+  }
+
+  onChangedSRobots_Jamais(event: any) {
+    this.SRobots_Jamais = event.target.value;
+    console.log("SRobots_Jamais" + this.SRobots_Jamais);
+  }
+
+
+  Prediction() {
     const uploadData = new FormData();
     uploadData.append('title', this.title);
+    console.log("Elec " + this.SElec);
     console.log(JSON.stringify(this.Questions));
     console.log(this.Questions);
     console.log(this.Questions[0]);
+
+    for (var index in this.Questions) {
+      console.log(index); // prints indexes: 0, 1, 2, 3
+      const val1 = this.Questions[index]["1-Quel est ton numéro étudiant ?"];
+      if (this.Etudiants[index] == val1) {
+        
+        const val2 = "ENSIM'Elec toujours bien";
+        //const val2 = this.Questions[index]["5-Quelles sont les associations de l'ensim qui t’intéresse ?"];
+        console.log("val2 " + val2);
+
+        switch (val2) {
+          case "ENSIM'Elec":
+              console.log("It is a ENSIM'Elec.");
+              break;
+          case "Jensim":
+              console.log("It is a Jensim.");
+              break;
+          case "running":
+              console.log("It is a running.");
+              break;
+          default:
+              console.log("No such day exists!");
+              break;
+      }
+        
+      }
+      //this.Etudiants.push(this.val);
+    }
+    console.log("Etudiants " + this.Etudiants);
+
+
+    //let day : number = 4;
+
+    
+    
+
+
+
   }
 }

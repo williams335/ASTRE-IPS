@@ -27,27 +27,27 @@
   <div class="success">
     <label>
       <h6>Ensim'Elec:</h6>
-      <input type="number" value="{{SElec}}" (change)="onTitleChanged($event)" />
+      <input type="number" value="{{SElec}}" (change)="onChangedSElec($event)" />
     </label>
     <br/>
     <label>
       <h6>Jensim:</h6>
-      <input type="number" value="10" (change)="onTitleChanged($event)" />
+      <input type="number" value="{{SJensim}}" (change)="onChangedSJensim($event)" />
     </label>
     <br/>
     <label>
       <h6>Ensim is running:</h6>
-      <input type="number" value="-5" (change)="onTitleChanged($event)" />
+      <input type="number" value="{{SRunning}}" (change)="onChangedSRunning($event)" />
     </label>
     <br/>
     <label>
     <h6>Java, python, php, ou Javascript:</h6>
-      <input type="number" value="12" (change)="onTitleChanged($event)" />
+      <input type="number" value="{{SLangWeb}}" (change)="onChangedSLangWeb($event)" />
     </label>
     <br/>
     <label>
     <h6>C, C++ ou Assembleur:</h6>
-      <input type="number" value="-12" (change)="onTitleChanged($event)" />
+      <input type="number" value="{{SlangMats}}" (change)="onChangedSlangMats($event)" />
     </label>
     <br/>
     <label>
@@ -56,17 +56,17 @@
     <br/>
     <ul>
     <li>Régulièrement:
-    <input type="number" value="16" (change)="onTitleChanged($event)" />
+    <input type="number" value="{{SPaintPhotoshop_Regu}}" (change)="onChangedSPaintPhotoshop_Regu($event)" />
     </li>
     <br/>
     <li>
     Un peu:
-    <input type="number" value="8" (change)="onTitleChanged($event)" />
+    <input type="number" value="{{SPaintPhotoshop_Unpeu}}" (change)="onChangedSPaintPhotoshop_Unpeu($event)" />
     </li>
     <br/>
     <li>
     Jamais:
-    <input type="number" value="-15" (change)="onTitleChanged($event)" />
+    <input type="number" value="{{SPaintPhotoshop_Jamais}}" (change)="onChangedSPaintPhotoshop_Jamais($event)" />
     </li>
   </ul>
     </label>
@@ -77,17 +77,17 @@
       <br/>
       <ul>
       <li>Régulièrement:
-      <input type="number" value="-12" (change)="onTitleChanged($event)" />
+      <input type="number" value="{{SLinux_Regu}}" (change)="onChangedSLinux_Regu($event)" />
       </li>
       <br/>
       <li>
       Un peu:
-      <input type="number" value="-5" (change)="onTitleChanged($event)" />
+      <input type="number" value="{{SLinux_Unpeu}}" (change)="onChangedSLinux_Unpeu($event)" />
       </li>
       <br/>
       <li>
       Jamais:
-      <input type="number" value="11" (change)="onTitleChanged($event)" />
+      <input type="number" value="{{SLinux_Jamais}}" (change)="onChangedSLinux_Jamais($event)" />
       </li>
     </ul>
     </label>
@@ -98,17 +98,17 @@
         <br/>
         <ul>
         <li>Régulièrement:
-        <input type="number" value="-15" (change)="onTitleChanged($event)" />
+        <input type="number" value="{{SArduino_Regu}}" (change)="onChangedSArduino_Regu($event)" />
         </li>
         <br/>
         <li>
         Un peu:
-        <input type="number" value="-8" (change)="onTitleChanged($event)" />
+        <input type="number" value="{{SArduino_Unpeu}}" (change)="onChangedSArduino_Unpeu($event)" />
         </li>
         <br/>
         <li>
         Jamais:
-        <input type="number" value="12" (change)="onTitleChanged($event)" />
+        <input type="number" value="{{SArduino_Jamais}}" (change)="onChangedSArduino_Jamais($event)" />
         </li>
       </ul>
     </label>
@@ -119,17 +119,17 @@
           <br/>
           <ul>
           <li>Régulièrement:
-          <input type="number" value="16" (change)="onTitleChanged($event)" />
+          <input type="number" value="{{SLogicielpc_Regu}}" (change)="onChangedSLogicielpc_Regu($event)" />
           </li>
           <br/>
           <li>
           Un peu:
-          <input type="number" value="8" (change)="onTitleChanged($event)" />
+          <input type="number" value="{{SLogicielpc_Unpeu}}" (change)="onChangedSSLogicielpc_Unpeu($event)" />
           </li>
           <br/>
           <li>
           Jamais:
-          <input type="number" value="-12" (change)="onTitleChanged($event)" />
+          <input type="number" value="{{SLogicielpc_Jamais}}" (change)="onChangedSLogicielpc_Jamais($event)" />
           </li>
         </ul>
     </label>
@@ -140,17 +140,17 @@
             <br/>
             <ul>
             <li>Régulièrement:
-            <input type="number" value="16" (change)="onTitleChanged($event)" />
+            <input type="number" value="{{SLogos_Regu}}" (change)="onChangedSLogos_Regu($event)" />
             </li>
             <br/>
             <li>
             Un peu:
-            <input type="number" value="7" (change)="onTitleChanged($event)" />
+            <input type="number" value="{{SLogos_Unpeu}}" (change)="onChangedSLogos_Unpeu($event)" />
             </li>
             <br/>
             <li>
             Jamais:
-            <input type="number" value="-15" (change)="onTitleChanged($event)" />
+            <input type="number" value="{{SLogos_Jamais}}" (change)="onChangedSLogos_Jamais($event)" />
             </li>
           </ul>
     </label>
@@ -161,23 +161,23 @@
                 <br/>
                 <ul>
                 <li>Régulièrement:
-                <input type="number" value="-16" (change)="onTitleChanged($event)" />
+                <input type="number" value="{{SRobots_Regu}}" (change)="onChangedSRobots_Regu($event)" />
                 </li>
                 <br/>
                 <li>
                 Un peu:
-                <input type="number" value="-8" (change)="onTitleChanged($event)" />
+                <input type="number" value="{{SRobots_Unpeu}}" (change)="onChangedSRobots_Unpeu($event)" />
                 </li>
                 <br/>
                 <li>
                 Jamais:
-                <input type="number" value="12" (change)="onTitleChanged($event)" />
+                <input type="number" value="{{SRobots_Jamais}}" (change)="onChangedSRobots_Jamais($event)" />
                 </li>
               </ul>
     </label>
     <br/>
     <br/>
-    <button (click)="newBook()">Prediction</button>
+    <button (click)="Prediction()">Prediction</button>
     <br/>
     <br/>
 </div>
