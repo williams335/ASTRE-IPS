@@ -18,6 +18,20 @@ h6{
 
 input{
     width: 10em;
+    background: #343a40;
+    color: white
+}
+
+.nonFirstRow{
+    display: none;
+}
+
+.FirstRow{
+    display: block;
+}
+
+#myChart{
+    background-color: white;
 }
 
 .success{

@@ -175,12 +175,42 @@
                 </li>
               </ul>
     </label>
+            <br/>
+            <br/>
+    <label>
+              <h6>Réalisation d'un système électronique:</h6>
+                <br/>
+                <ul>
+                <li>Régulièrement:
+                <input type="number" value="{{SElec_Regu}}" (change)="onChangedSElec_Regu($event)" />
+                </li>
+                <br/>
+                <li>
+                Un peu:
+                <input type="number" value="{{SElec_Unpeu}}" (change)="onChangedSElec_Unpeu($event)" />
+                </li>
+                <br/>
+                <li>
+                Jamais:
+                <input type="number" value="{{SElec_Jamais}}" (change)="onChangedSElec_Jamais($event)" />
+                </li>
+              </ul>
+    </label>
     <br/>
     <br/>
-    <button (click)="Prediction()">Prediction</button>
+    <button type="button" class="btn btn-danger" (click)="Prediction()">Prediction</button>
     <br/>
     <br/>
 </div>
+<div [ngClass]="Schart ? 'firstRow' : 'nonFirstRow'">
+  <h6>Plus le score d'un étudiant est grand plus il se rapproche d'un profil IPS </h6>
+  <h6>Plus il est petit plus il se rapproche d'un profil ASTRE </h6>
+  <br/>
+  <h1 [style.color]="'black'">Score des étudiants</h1>
+<canvas id="myChart"></canvas>
+</div>
+<br/>
+<br/>
 </div>
 
 
